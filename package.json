@@ -1,0 +1,11 @@
+{
+  "name": "apigeek",
+  "version": "1.0.0",
+  "description": "simulador de api",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch ./database/db.json --port 3000"
+  },
+  "author": "Luma",
+  "license": "ISC"
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Luma Api Geek</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <script type="module" defer src="./js/prompt.js" ></script>
+        <script type="module" defer src="./js/mostrarProductos.js"></script>
+        <script type="module" defer src="./js/eventosFormulario.js"></script>
+        <script src="https://kit.fontawesome.com/2d9fe71672.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <img src="./images/logo.png" alt="Logo de Api Geek" class="logo" title="Logo Api Geek">
+        </header>
+        <main>
+            <section class="productos">
+                <h2>ORDEN CRONOLÓGICO UNIVERSO MARVEL:</h2>
+                <div class="contenedor_productos" data-productos>
+                    <!-- acá aparecen los productos -->
+                </div>
+            </section><!--fin productos-->
+            <form class="form" data-formulario>
+                <h2 class="form__titulo">AGREGAR PRODUCTOS:</h2>
+                <input type="text" data-nombre placeholder="nombre..." required>
+                <input type="text" data-ver placeholder="plataforma..."  required>
+                <input type="text" data-enlace placeholder="enlace..."  required>
+                <input type="text" data-imagen placeholder="imagen..." required>
+                <div class="contenedor_botones">
+                    <button type="submit" id="enviar">ENVIAR</button>
+                    <button data-limpiar id="limpiar">LIMPIAR</button>
+                </div>
+            </form><!--fin form-->
+        </main>
+        <footer>
+            <img src="./images/logo.png"  class="logo" alt="Logo Api Geek" title="Logo Api Geek">
+            <p>DESARROLLADO POR LUMA</p>
+            <p class="cliente">ALURA LATAM 2024</p>
+        </footer>  
+    </body>
+</html>

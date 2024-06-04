@@ -1,0 +1,15 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-negro);
+    width: Fill (360px)px;
+    height: Hug (56px)px;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+    img{
+        width: auto;
+        height: 36px;
+    }
+}/*fin header*/

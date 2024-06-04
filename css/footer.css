@@ -1,0 +1,31 @@
+footer{
+    width: Fill (360px)px;
+    height: Hug (56px)px;
+    padding: 8px;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 5px; */
+    box-shadow: 0px -10px 9.5px 0px var(--color-sombraNegra);
+    
+    img{
+        width: auto;
+        height: 26px;
+    }
+
+    p{
+        font-family: var(--font-ppal);
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 16px;
+        text-align: center;
+
+    }
+    .cliente{
+        font-weight: 200;
+    }
+
+}/*fin footer*/

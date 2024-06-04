@@ -1,6 +1,6 @@
 
 async function listaproducto(){
-
+    
     try {
         const conexion = await fetch ("http://localhost:3000/productos",{
         method:"GET" ,

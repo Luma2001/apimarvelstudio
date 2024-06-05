@@ -5,7 +5,7 @@
 <h3>Descripción del Proyecto</h3>
 <em>Código finalizado✔️</em>
 
-<p>Creación de Sitio Responsive que muestra el ordem cronológico que se deben ver las películas y series de Marvel Studio.<br> 
+<p>Creación de Sitio Responsive que muestra el orden cronológico que se deben ver las películas y series de Marvel Studio.<br> 
 El sitio fue creado como parte de un desafío de Alura Latam, cuyo objetivo es la conexión exitosa a una API Rest.<br> 
 Para ello se utilizó JSON Server para simular una API REST a partir de un archivo JSON y así realizar operaciones CRUD<br> 
 y simular respuestas de servidor.</p>
@@ -16,7 +16,7 @@ y simular respuestas de servidor.</p>
 <ul>
   <li>Maquetación: HTML5</li>
   <li>Estilos: CSS3</li>
-  <li>Funcionalidades: JAVASCRITP</li>
+  <li>Funcionalidades: JAVASCRIPT</li>
   <li>Fake server: JSON-SERVER</li>
 </ul>
 
@@ -25,6 +25,6 @@ y simular respuestas de servidor.</p>
 |  HTML  |  CSS  | JS | Json-Server |  
 <br>
 
-<h3>Desarrolladora: 👷‍♀</h3>
+<h3>Desarrolladora: <img src="images/luma.png" height="60" alt="Avatar Luma"></h3>
 <p>Luciana Quilcate: https://github.com/luma2001</p>
 

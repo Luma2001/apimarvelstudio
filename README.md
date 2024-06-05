@@ -20,7 +20,7 @@ y simular respuestas de servidor.</p>
   <li>Fake server: JSON-SERVER</li>
 </ul>
 
-<img src="images/html.png" height="60" alt="HTML"> | <img src="images/css.png" height="60" alt="CSS"> | <img src="images/js.png" height="60" alt="JS"> | <img src="images/jserver.png" height="60" alt="JsonServer"> | 
+<img src="images/html.png" height="60" alt="HTML"> | <img src="images/css.png" height="60" alt="CSS"> | <img src="images/js.png" height="60" alt="JS"> | <img src="images/jser.png" height="60" alt="JsonServer"> | 
 | :------------: | :------------: | :------------: | :------------: | 
 |  HTML  |  CSS  | JS | JSON SERVER|  
 <br>

@@ -22,7 +22,7 @@ y simular respuestas de servidor.</p>
 
 <img src="images/html.png" height="60" alt="HTML"> | <img src="images/css.png" height="60" alt="CSS"> | <img src="images/js.png" height="60" alt="JS"> | <img src="images/jserver.png" height="60" alt="JsonServer"> | 
 | :------------: | :------------: | :------------: | :------------: | 
-|  HTML  |  CSS  | JS | Json-Server |  
+|  HTML  |  CSS  | JS | JSON SERVER|  
 <br>
 
 <h3>Desarrolladora: <img src="images/luma.png" height="60" alt="Avatar Luma"></h3>

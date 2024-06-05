@@ -27,7 +27,7 @@ y simular respuestas de servidor.</p>
 
 <h3>Desarrolladora:</h3> 
 
- <a href="https://github.com/luma2001"> <img src="images/luma.png" height="35" alt="Avatar Luma"> </a>
+ <a href="https://github.com/luma2001"> <img align="center" src="images/luma.png" height="60" alt="Avatar Luma"> </a>
   
 
   

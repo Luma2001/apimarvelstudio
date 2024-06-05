@@ -1,6 +1,6 @@
 #Universo Marvel Orden Cronológico
 
-![imagen](https://github.com/Luma2001/apimarvelstudio/assets/114626233/90dde633-53af-4249-b6dc-338b64f70992)
+![Captura de pantalla del sitio Universo Marvel Orden Cronológico](https://github.com/Luma2001/apimarvelstudio/assets/114626233/90dde633-53af-4249-b6dc-338b64f70992)
 
 <h3>Descripción del Proyecto</h3>
 <em>Código finalizado✔️</em>

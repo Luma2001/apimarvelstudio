@@ -25,8 +25,8 @@ y simular respuestas de servidor.</p>
 |  HTML  |  CSS  | JS | JSON SERVER|  
 <br>
 
-<h3>Desarrolladora: <br>
-  <img src="images/luma.png" height="60" alt="Avatar Luma"> |  
+<h3>Desarrolladora:</h3> 
+  | <img src="images/luma.png" height="35" alt="Avatar Luma"> |  
   | :------------: |
-https://github.com/luma2001 | 
-</h3>
+  | https://github.com/luma2001 | 
+

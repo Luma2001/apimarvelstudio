@@ -11,7 +11,7 @@ function crearCard(imagen,nombre,ver,enlace,id){
                     <div class="card-container--info">
                         <p>${nombre}</p>
                         <div class="card-container--value">
-                            <p>Ahora en: <br><a href="${enlace}">${ver}</a></p>
+                            <p>Ahora en: <br><a href="${enlace}" target="_black">${ver}</a></p>
                             <i class="fa-regular fa-trash-can" data-id="${id}"></i>
                         </div>
                     </div>    

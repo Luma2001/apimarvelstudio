@@ -17,7 +17,7 @@ async function listaproducto(){
     
 }
 
-async function enviarproducto(imagen,nombre, ver, enlace,){
+async function enviarproducto(imagen,nombre, ver, enlace){
     const conexion = await fetch ("http://localhost:3000/productos",{
         method:"POST" ,
         headers:{"Content-type":"application/json"},   

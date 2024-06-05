@@ -26,7 +26,9 @@ y simular respuestas de servidor.</p>
 <br>
 
 <h3>Desarrolladora:</h3> 
-  | <img src="images/luma.png" height="35" alt="Avatar Luma"> |  
+  | <img src="images/luma.png" height="35" alt="Avatar Luma"> | 
+  
   | :------------: |
+  
   | https://github.com/luma2001 | 
 

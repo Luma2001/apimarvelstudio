@@ -1,4 +1,5 @@
 import { conexionAPI } from "./services/conectionApi.js";
+import { prompt } from "./prompt.js";
 
 
 const contenedorProductos = document.querySelector("[data-productos]");
@@ -24,10 +25,10 @@ function crearCard(imagen,nombre,ver,enlace,id){
 console.log(btnBorrar);
 console.log(imagen);
 
-    btnBorrar.addEventListener("click", async () =>{
-        
-        await conexionAPI.borrarproducto(idbtn);
-        card.remove();
+    btnBorrar.addEventListener("click", async() =>{
+        prompt.borrar("¿BORRAR PRODUCTO?", idbtn)
+        // await conexionAPI.borrarproducto(idbtn);
+        // card.remove();
     })
     return card;
 }

@@ -2,13 +2,13 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: 24%;
   left: 0;
   margin: auto;
   width: 25em;
   height: 12em;
   background-color:var(--color-negro);
-  border: 7px solid var(--color-rojo);
+  border: 2px solid var(--color-rojo);
   border-radius: 4px;
   box-shadow: 4px 4px 4px 5px var(--color-sombraRoja);
 
@@ -25,7 +25,7 @@
   padding: 1.5em;
   text-align: center;
   color: var(--color-rojo);
-  font-weight: bolder;
+  font-weight: 400;
   font-size: 1.4em;
   text-shadow: 1px 1px 2px var(--color-sombraRoja);
 }
@@ -36,8 +36,9 @@
   background-color: var(--color-blanco);
   border: 3px solid var(--color-borderCard);
   border-radius: 5px;
-  margin: 0.5em, auto;
-  padding: 0.2em;
+  margin-left: 30%;
+  margin-bottom: 5%;
+  /* padding: 30%; */
   transition: all .2s;
   
 }

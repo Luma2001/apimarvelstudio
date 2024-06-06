@@ -1,3 +1,4 @@
+import { conexionAPI } from "./services/conectionApi.js";
 
 export const prompt = {
 
@@ -5,7 +6,7 @@ export const prompt = {
 
         
         //1) llama donde aparece prompt     
-            const main= document.querySelector("main");
+            const form= document.querySelector(".form");
         
         //2)Creo un elemento donde voy a mostrar la nota que quiero editar    
             const panelPrompt = document.createElement('div'); //acá estamos creando un div
@@ -28,93 +29,66 @@ export const prompt = {
 
             panelPrompt.append(mensaje, btnAceptar);
         
-        //6) Agrego panelPrompt como hijo de main
-            main.appendChild(panelPrompt);
+        //6) Agrego panelPrompt como hijo de form
+            form.appendChild(panelPrompt);
             
             btnAceptar.addEventListener('click', ()=>{
                     //a)cierro panelPrompt   
-                main.removeChild(panelPrompt);
+                form.removeChild(panelPrompt);
             })
         
 
         },  
 
-    
-    borrar:(id)=>{
-        //Capturo nota que quiero borrar
-        const notaParaBorrar= document.getElementById(id);
-       
-       /*
-        //Creo función para borrar tareas por id
-        if(confirm("¿Está Seguro que desea borrar?")){
-        tareaCounter--;
-        const nota = document.getElementById(id);
-        const padre= nota.parentNode;
-        padre.removeChild(nota);}else{
-            alert("Genial")
-        }
-        nota.guardar();
-        */
+        borrar: (texto, id) => {
 
-        //otra forma de hacerlo, creando prompt propio
-        //1)llamo el id donde quiero que se abra el prompt   
-            const tablero = document.getElementById("tablero");
         
-        //2)Creo un elemento donde voy a mostrar la nota que quiero editar    
-            const panelBorrar = document.createElement('div'); //acá estamos creando un div
-        
-        //3)Le asigno una clase a panelEditor
-            panelBorrar.className = 'prompt';
-        
-        //Nota: Mi panel editor debe mostrar:
-        //      mensaje:"¿Está Seguro que desea borrar?"
-        //      boton para confirmar borrado
-        //      boton para cancelar borrado
-
-        //4) Creando el elemento párrafo y agrego mensaje
-            const mensaje = document.createElement('p');
-            mensaje.textContent ="¿Está seguro que desea borrar nota?";
+            //1) llama donde aparece prompt     
+                const main= document.querySelector("main");
+            
+            //2)Creo un elemento donde voy a mostrar la nota que quiero editar    
+                const panelPrompt = document.createElement('div'); //acá estamos creando un div
+            
+            //3)Le asigno una clase a panelEditor
+                panelPrompt.className = 'prompt';
+            
+                //Nota: Mi panel editor debe mostrar:
+                //      mensaje: "Producto agregado con éxito.""
+                //      boton para ok
            
-        //5) Creando el boton aceptar y boton cancelar
-            const btnAceptar = document.createElement('button');
-            texto = document.createTextNode('ACEPTAR');
-            btnAceptar.appendChild(texto);
+            //4) Creando el elemento párrafo y agrego mensaje
+                const mensaje = document.createElement('p');
+                mensaje.textContent =texto;
+               
+            //5) Creando el boton ok
+                const btnAceptar = document.createElement('button');
+                let btntexto = document.createTextNode('OK');
+                btnAceptar.appendChild(btntexto);
 
+            //5) Creando el boton cancelar
             const btnCancelar = document.createElement('button');
-            texto = document.createTextNode('CANCELAR');
-            btnCancelar.appendChild(texto);
-
-        //6) Agrego mensaje y botones al panelBorrar
-            panelBorrar.append(mensaje, btnAceptar, btnCancelar);
-        
-        //7) Agrego panelEditor como hijo de tablero
-            tablero.appendChild(panelBorrar);
-        
-        //8) Creo un eventListener para agregar acciones al btnAceptar
-            btnAceptar.addEventListener('click', (id)=>{                
-                //a)llamo al padre y la borro
-                tareaCounter--;
-                const papa= notaParaBorrar.parentNode;
-                papa.removeChild(notaParaBorrar);
-
-                //b)cierro panelBorrar    
-                tablero.removeChild(panelBorrar);
-                nota.guardar();
-            })  
-        
-        // 
-            btnCancelar.addEventListener('click', () =>{
-                //a)cierro panelBorrar    
-                tablero.removeChild(panelBorrar);
+            let btntext = document.createTextNode('CANCELAR');
+            btnCancelar.appendChild(btntext);    
+    
+                panelPrompt.append(mensaje, btnAceptar, btnCancelar);
+            
+            //6) Agrego panelPrompt como hijo de main
+                main.appendChild(panelPrompt);
+                
+                btnAceptar.addEventListener('click', async()=>{
+                    //a)cierro panelPrompt   
+                    await conexionAPI.borrarproducto(id);
+                    card.remove();
+                    main.removeChild(panelPrompt);
             })
 
-
-
-
-
-
-       
-    }, 
+                btnCancelar.addEventListener('click', ()=>{
+                        //a)cierro panelPrompt   
+                    main.removeChild(panelPrompt);
+                })
+            
+    
+            },
 
     editar: (id)=>{
         //1)llamamos la nota que queremos editar
@@ -177,100 +151,4 @@ export const prompt = {
             
     },
 
-    terminar: (id)=>{
-        
-        const tareaLista = document.getElementById(id);
-        const padre= tareaLista.parentNode;
-        padre.removeChild(tareaLista);
-        
-        if(padre==toDoContainer){
-            tareaCounter--;
-            checkContainer.appendChild(tareaLista);
-        } else {//creo elemento donde voy a colocar los datos para el panelHistorial
-
-                //Creo elemento li y adjudico la clase tareaArchivadas
-                const item = document.createElement('li');
-                item.className = 'tareasArchivadas';
-                
-                //LLamo h4, p  y creo fecha
-                const titulo = document.createElement('span');
-                titulo.textContent = tareaLista.childNodes[2].textContent + ": ";
-                const descripcion = document.createElement('span');
-                descripcion.textContent=tareaLista.childNodes[4].textContent+". Finalizada el ";
-                const fecha = new Date().toLocaleString();
-                const textContenido = document.createTextNode(titulo.innerText + descripcion.innerText  + fecha);
-                //Agrego titulo, descripcion y fecha como hijos de item
-                item.appendChild(textContenido);
-                console.log(item.childNodes);
-
-                //Agrego item al panelHistorial
-                panelhistorial.appendChild(item);
-            
-                //Guardo en localStorage    
-                nota.guardarHistorial();
-        
-        }  
-        //Guardo en localStorage  
-        nota.guardar();
-    },
-
-    guardar: ()=>{
-        const notasGuardadas = document.querySelectorAll('.tarea');
-        const arr = [];
-
-        for(let n of notasGuardadas){
-            const parent = n.parentNode;
-            objeto = {
-                padre: parent.id,
-                id: n.id,
-                titulo: n.childNodes[2].textContent,
-                descripcion: n.childNodes[4].textContent
-            }  
-        arr.push(objeto);    
-        }
-        localStorage.setItem('notas',JSON.stringify(arr));
-        localStorage.setItem('idTarea',JSON.stringify(idTarea));
-        localStorage.setItem('tareaCounter',JSON.stringify(tareaCounter));
-    },
-
-    guardarHistorial: ()=>{
-        const historial = document.querySelectorAll('.tareasArchivadas');
-        const array = [];
-        for(let h of historial){
-            const parent = h.parentNode;
-            objeto = {
-                padre:parent.id,
-                texto:h.innerText
-            }
-            array.push(objeto);
-        }
-        localStorage.setItem('historial',JSON.stringify(array));
-
-    },
-
-    cargar: ()=>{
-        const notasCargadas = JSON.parse(localStorage.getItem('notas'))??[];
-        notasCargadas.forEach((n) => {
-            const tareaNueva = document.createElement('div');
-            const padre = document.getElementById(n.padre);
-            nota.crear(tareaNueva,n.id,n.titulo,n.descripcion);
-            padre.appendChild(tareaNueva);      
-        });
-
-        const historialCargado = JSON.parse(localStorage.getItem('historial'))??[];
-        historialCargado.forEach((h) => {
-            const item = document.createElement('li');
-            item.className = 'tareasArchivadas';
-            const padre = document.getElementById(h.padre);
-            item.textContent = h.texto;
-            padre.appendChild(item);
-        });
-
-        idTarea = JSON.parse(localStorage.getItem('idTarea')??0);
-        tareaCounter=JSON.parse(localStorage.getItem('tareaCounter')??0);
-        //console.log(idTarea);
-        console.log('tareaCounter');
-    },
-
- 
-}//Fin objeto nota
+}//Fin objeto 
